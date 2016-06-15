@@ -100,7 +100,7 @@
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Change_macOS_Screenshot_Folder" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="m2S-Jp-Qdl">
+                    <view key="view" id="m2S-Jp-Qdl" customClass="DragView" customModule="Change_macOS_Screenshot_Folder" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="61"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
@@ -133,6 +133,10 @@
                                 </textFieldCell>
                             </textField>
                         </subviews>
+                        <connections>
+                            <outlet property="prueba" destination="wYq-Ra-rGa" id="rvo-ff-jMq"/>
+                            <outlet property="textFielPath" destination="wYq-Ra-rGa" id="LK4-2E-NAq"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="openButton" destination="HNV-2z-gUm" id="gf8-jk-8RX"/>

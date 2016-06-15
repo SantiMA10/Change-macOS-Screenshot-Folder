@@ -15,6 +15,7 @@
 		855BD3911D115A5200B6609A /* Change_macOS_Screenshot_FolderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855BD3901D115A5200B6609A /* Change_macOS_Screenshot_FolderUITests.swift */; };
 		855BD3A01D115AC200B6609A /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 855BD39E1D115AC200B6609A /* LICENSE */; };
 		855BD3A11D115AC200B6609A /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 855BD39F1D115AC200B6609A /* README.md */; };
+		855BD3A31D1163CB00B6609A /* DragView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855BD3A21D1163CB00B6609A /* DragView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		855BD3921D115A5200B6609A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		855BD39E1D115AC200B6609A /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		855BD39F1D115AC200B6609A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		855BD3A21D1163CB00B6609A /* DragView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				855BD3771D115A5200B6609A /* Assets.xcassets */,
 				855BD3791D115A5200B6609A /* Main.storyboard */,
 				855BD37C1D115A5200B6609A /* Info.plist */,
+				855BD3A21D1163CB00B6609A /* DragView.swift */,
 			);
 			path = "Change-macOS-Screenshot-Folder";
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			files = (
 				855BD3A11D115AC200B6609A /* README.md in Sources */,
 				855BD3761D115A5100B6609A /* ViewController.swift in Sources */,
+				855BD3A31D1163CB00B6609A /* DragView.swift in Sources */,
 				855BD3741D115A5100B6609A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,6 +487,7 @@
 				855BD3971D115A5200B6609A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		855BD3981D115A5200B6609A /* Build configuration list for PBXNativeTarget "Change-macOS-Screenshot-FolderTests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +496,7 @@
 				855BD39A1D115A5200B6609A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		855BD39B1D115A5200B6609A /* Build configuration list for PBXNativeTarget "Change-macOS-Screenshot-FolderUITests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +505,7 @@
 				855BD39D1D115A5200B6609A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

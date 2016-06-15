@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, NSTextFieldDelegate {
 
     @IBOutlet weak var openButton: NSButton!
     @IBOutlet weak var pathTextField: NSTextField!
@@ -19,6 +19,7 @@ class ViewController: NSViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 
+        pathTextField.delegate = self
         pathTextField.editable = false
     }
 
@@ -32,6 +33,9 @@ class ViewController: NSViewController {
         super.viewDidAppear()
 
         view.window!.title = "Change-macOS-Screenshot-Folder"
+    }
+    
+    func textFieldDidEndEditing(textField: NSTextField) {
     }
 
 
@@ -56,19 +60,26 @@ class ViewController: NSViewController {
 
     @IBAction func setFolder(sender: NSButton) {
         
-        var task = NSTask()
-        task.launchPath = "/usr/bin/env"
-        task.arguments = ["defaults", "write",
-            "com.apple.screencapture", "location",
-            path.precomposedStringWithCanonicalMapping]
-        task.launch()
-        task.waitUntilExit()
+        if((path == "" && pathTextField.stringValue != "") || (path != pathTextField.stringValue)){
+            path = pathTextField.stringValue
+        }
         
-        task = NSTask()
-        task.launchPath = "/usr/bin/env"
-        task.arguments = ["killall", "SystemUIServer"]
-        task.launch()
-        task.waitUntilExit()
+        if(path != ""){
+            var task = NSTask()
+            task.launchPath = "/usr/bin/env"
+            task.arguments = ["defaults", "write",
+                              "com.apple.screencapture", "location",
+                              path.precomposedStringWithCanonicalMapping]
+            task.launch()
+            task.waitUntilExit()
+            
+            task = NSTask()
+            task.launchPath = "/usr/bin/env"
+            task.arguments = ["killall", "SystemUIServer"]
+            task.launch()
+            task.waitUntilExit()
+
+        }
         
     }
 }
