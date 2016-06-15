@@ -1,0 +1,1 @@
+# Change-macOS-Screenshot-Folder
